@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1.1rem;
+}
+:root {
+  --primaryColor: green;
+  --secColor: lightgreen;
+  --thColor: yellow;
+}
+
+.wrapper {
+  background: linear-gradient(rgb(88, 200, 111), green);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.calculator {
+  background: rgb(2, 2, 2);
+  padding: 2rem 0.4rem;
+  border-radius: 10px;
+  width: 400px;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  grid-template-areas:
+    "display display display display"
+    "ac c percent divide"
+    "seven eight nine multiple"
+    "four five six minus"
+    "one two three plus"
+    " dec b0  equal equal";
+
+  /* grid-template-columns: repeat(4, 1fr); */
+}
+.calculator .btn {
+  background: rgb(26, 242, 250);
+  /* height: 50px; */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.calculator .btn:hover {
+  background: var(--secColor);
+  cursor: pointer;
+}
+
+.display {
+  grid-area: display;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--secColor);
+  /* height: 50px; */
+  padding: 1rem;
+  width: 100%;
+}
+.btn-ac {
+  grid-area: ac;
+}
+.btn-c {
+  grid-area: c;
+}
+.btn-percent {
+  grid-area: percent;
+}
+.btn-divide {
+  grid-area: divide;
+}
+.btn-seven {
+  grid-area: seven;
+}
+.btn-eight {
+  grid-area: eight;
+}
+.btn-nine {
+  grid-area: nine;
+}
+.btn-multiple {
+  grid-area: multiple;
+}
+.btn-four {
+  grid-area: four;
+}
+.btn-five {
+  grid-area: five;
+}
+.btn-six {
+  grid-area: six;
+}
+.btn-minus {
+  grid-area: minus;
+}
+.btn-one {
+  grid-area: one;
+}
+.btn-two {
+  grid-area: two;
+}
+.btn-three {
+  grid-area: three;
+}
+.btn-plus {
+  grid-area: plus;
+}
+.btn-b0 {
+  grid-area: b0;
+}
+.btn-dec {
+  grid-area: dec;
+}
+.btn-equal {
+  grid-area: equal;
+}
